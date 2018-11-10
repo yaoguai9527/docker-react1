@@ -3,7 +3,7 @@ FROM node:alpine as builder
 WORKDIR '/app'
 
 COPY package.json .
-RUN ["npm", "config", "set", "registry", "http://registry.npm.taobao.org"]
+#RUN ["npm", "config", "set", "registry", "http://registry.npm.taobao.org"]
 RUN npm install
 COPY . .
 RUN npm run build
